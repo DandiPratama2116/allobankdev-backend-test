@@ -22,12 +22,13 @@ class PersonalizationServiceTest {
     }
 
     @Test
-    @DisplayName("Should correctly calculate service_charge_pct for candidate username dandipratama")
+    @DisplayName("Should correctly calculate service_charge_pct for candidate username dandipratama2116")
     void testCandidateUsernameCalculation() {
         // d: 100, a: 97, n: 110, d: 100, i: 105, p: 112, r: 114, a: 97, t: 116, a: 97, m: 109, a: 97
-        // Sum = 1254 -> 1254 % 10 = 4 (4%)
-        int pct = service.calculateServiceChargePct("dandipratama");
-        assertEquals(4, pct);
+        // '2': 50, '1': 49, '1': 49, '6': 54
+        // Sum = 1456 -> 1456 % 10 = 6 (6%)
+        int pct = service.calculateServiceChargePct("dandipratama2116");
+        assertEquals(6, pct);
     }
 
     @Test

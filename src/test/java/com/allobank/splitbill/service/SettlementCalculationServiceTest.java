@@ -18,7 +18,7 @@ class SettlementCalculationServiceTest {
 
     @BeforeEach
     void setUp() {
-        PersonalizationService personalizationService = new PersonalizationService("dandipratama");
+        PersonalizationService personalizationService = new PersonalizationService("dandipratama2116");
         settlementService = new SettlementCalculationService(personalizationService);
     }
 
@@ -54,9 +54,9 @@ class SettlementCalculationServiceTest {
 
         // Total expenses = 90.00 + 60.00 = 150.00
         assertEquals(new BigDecimal("150.00"), response.getTotalExpenses());
-        assertEquals(4, response.getServiceChargePct());
-        // 150.00 * 4% = 6.00
-        assertEquals(new BigDecimal("6.00"), response.getServiceChargeAmount());
+        assertEquals(6, response.getServiceChargePct());
+        // 150.00 * 6% = 9.00
+        assertEquals(new BigDecimal("9.00"), response.getServiceChargeAmount());
 
         // Net Balances:
         // Alice: paid 90, owes 50 -> net = +40.00

@@ -6,14 +6,14 @@ A production-grade Spring Boot service for managing shared group expenses, suppo
 
 ## 1. Candidate Personalization
 
-- **GitHub Username:** `dandipratama`
+- **GitHub Username:** `DandiPratama2116` (lowercase: `dandipratama2116`)
 - **Calculation Formula:**
   - Lowercase ASCII values:
-    `d (100) + a (97) + n (110) + d (100) + i (105) + p (112) + r (114) + a (97) + t (116) + a (97) + m (109) + a (97) = 1254`
-  - `service_charge_pct = 1254 % 10 = 4` (**4%**)
+    `d (100) + a (97) + n (110) + d (100) + i (105) + p (112) + r (114) + a (97) + t (116) + a (97) + m (109) + a (97) + 2 (50) + 1 (49) + 1 (49) + 6 (54) = 1456`
+  - `service_charge_pct = 1456 % 10 = 6` (**6%**)
 - **Computed Value in Code:**
-  - Evaluated dynamically in `PersonalizationService` via `app.personalization.github-username=dandipratama`.
-  - Applied to group total expenses: `service_charge_amount = (totalExpenses * 4) / 100`.
+  - Evaluated dynamically in `PersonalizationService` via `app.personalization.github-username=dandipratama2116`.
+  - Applied to group total expenses: `service_charge_amount = (totalExpenses * 6) / 100`.
 
 ---
 
@@ -185,8 +185,8 @@ curl -X GET http://localhost:4110/api/v1/groups/e969966b-84a1-4200-a6ad-e0d06173
   "groupName": "Weekend Trip",
   "currency": "IDR",
   "totalExpenses": 270.00,
-  "service_charge_pct": 4,
-  "service_charge_amount": 10.80,
+  "service_charge_pct": 6,
+  "service_charge_amount": 16.20,
   "settled": false,
   "participantBalances": [
     {
